@@ -28,10 +28,8 @@ const NavButton = ({ title, customFunc, icon, color, dotColor }) => (
 
 const Navbar = () => {
   const {
-    activeMenu,
     setActiveMenu,
     isClicked,
-    setIsClicked,
     handleClick,
     screenSize,
     setScreenSize,
@@ -54,7 +52,7 @@ const Navbar = () => {
     } else {
       setActiveMenu(true);
     }
-  }, [screenSize]);
+  }, [setActiveMenu, screenSize]);
 
   return (
     <div className="flex justify-between p-2 md:mx-6 relative">
